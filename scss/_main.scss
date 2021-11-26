@@ -1,0 +1,191 @@
+body{
+    padding: 0;
+	margin: 0;
+	background: $body-background;
+}
+.header{
+	background: $background-header;
+	color: $color-header;
+	height: 630px;
+	border-bottom-right-radius: 100px;
+	border-bottom-right-radius: 35%;
+	&-wrap{
+	width: 480px;
+	margin-left: 100px;
+	}	
+	&_heading{
+	opacity: $header-opacity;
+	font-size: map-get($font-sizes, "50");
+	font-weight: $bold;
+	font-family: $family1;
+	margin-bottom: 0;
+	&::after{
+    content: 'awesome';
+    width: 210px;
+    height: 37px;
+    top: -45px;
+    left: 1px;
+    display: map-get($display, "block");
+    position: relative;
+    line-height: 30px;
+    background-color: $text-color;
+        }
+}
+&_text{
+	opacity: $header-opacity;
+	font-family: $family2;
+	font-size: map-get($font-sizes, "14");
+	margin-bottom: 60px;
+}
+&_button{
+	@include buttons;
+	margin-right: 150px;
+}
+}
+.landing{
+	&-logo{
+	display: map-get($display, "flex");
+	span{
+	font-size: map-get($font-sizes, "10");
+	display: map-get($display, "block");
+	}
+	p{
+	text-align: center;
+	font-size: map-get($font-sizes, "20");
+	font-weight: $bold;
+	font-family: $family2;
+	line-height: 20px;
+	opacity: $header-opacity;
+	}
+	img{
+	margin-top: 15px;
+	margin-right: 10px;
+	@each $size in $size {
+	width: $size;
+	height: $size;
+	}
+	}
+	}
+}
+.login{
+	@include links;
+}
+.section{
+	&_text{
+	font-size: map-get($font-sizes, "25");
+	font-family: $family2;
+	opacity: 90%;
+	font-weight: $bold;
+	text-align: center;
+	&::after{
+            content: 'adventure';
+            width: 117px;
+            height: 37px;
+            top: -45px;
+            left: 765px;
+            display: map-get($display, "block");
+            position: relative;
+            line-height: 50px;
+            background-color: $text-color;
+        }
+}
+&_card_wrap{
+	@extend %center;
+	width: 900px;
+}
+&_card{
+	background: $section-main-background;
+	margin-bottom: 20px;
+	border-radius: 5px;
+	display: map-get($display, "flex");
+	color: $mixin-color;
+	height: 250px;
+	padding: 10px;
+	font-family: $family2;
+	font-size: map-get($font-sizes, "12");
+}
+&_card_right_container{
+	width: $card-width;
+	margin-left: 90px;
+	margin-top: 20px;
+	line-height: 20px;
+}
+&_card_text{
+	opacity: $opacity;
+	margin-bottom: 20px;
+	font-family: $card-text;
+}
+&_card_heading{
+	font-size: map-get($font-sizes, "20");
+	text-align: center;
+}
+&_link{
+	@include links2;
+}
+&_banner{
+	position: relative;
+	top: 50px;
+	@extend %gradient;
+	width: 1000px;
+	height: 100px;
+	border-radius: 5px;
+	@extend %center;
+	display: map-get($display, "flex");
+	justify-content: space-between;
+	align-items: center;
+}
+&_banner_text_wrap{
+	margin-left: 80px;
+}
+&_banner_heading{
+height: 20px;
+	color: black;
+	margin-top: 10px;
+	opacity: $opacity;
+	font-family: $family2;
+	font-weight: $bold;
+	font-size: map-get($font-sizes, "20");
+	&::after{
+            content: 'start';
+            width: 40px;
+            height: 37px;
+            top: -41px;
+            left: 85px;
+            display: map-get($display, "block");
+            position: relative;
+            line-height: 50px;
+            background-color: $text-color;
+        }
+}
+&_banner_text{
+	color: $mixin-color;
+	font-family: $family2;
+	font-size: map-get($font-sizes, "12");
+	opacity: $opacity;
+}
+&_banner_button{
+	@include buttons;
+	margin-right: 80px;
+}
+}
+.footer{
+	background: $section-main-background;
+	color: $mixin-color;
+&-wrap{
+	padding: 100px 80px 50px 80px;
+	display: map-get($display, "flex");
+	opacity: $opacity;
+}
+&_text{
+	width: 260px;
+	@extend %center;
+	font-family: $family2;
+	font-size: map-get($font-sizes, "12");
+}
+&-cr{
+	font-family: $family2;
+	font-size: map-get($font-sizes, "16");
+	margin-top: 20px;
+}
+}
+

@@ -1,0 +1,65 @@
+$body-background: white;
+$background-header: url(../img/m-h-day.jpg) center no-repeat;
+$font-sizes: (
+    "10": 10px,
+    "12" : 12px,
+    "16" : 16px,
+    "20": 20px,
+    "25": 25px,
+    "50": 50px 
+    );
+$display: (
+    "block": block,
+    "flex" : flex
+    );    
+$color-header: black;
+$family1: 'Source Sans Pro', sans-serif;
+$family2:  'Hind', sans-serif;
+$family3: 'Fresca', sans-serif;
+$size: 50px;
+$bold: bold;
+$header-opacity: 70%;
+$opacity: 70%;
+$text-color: #14a0c7;
+$mixin-color: white;
+$mixin-background: #699900; 
+@mixin buttons{
+	color: $mixin-color;
+	background: $mixin-background;
+	height: 40px;
+	width: 120px;
+	border-radius: 3px;
+	border: $mixin-background;
+	font-family: $family1;
+	font-size: map-get($font-sizes, "16");
+	font-weight: $bold;
+	&:hover{
+	cursor: pointer;
+	}
+}
+@mixin links{
+	color: $mixin-color;
+	font-family: $family1;
+	font-size: map-get($font-sizes, "16");
+	font-weight: $bold;
+}
+%center{
+	margin-left: auto;
+	margin-right: auto;
+}
+$card-text: $family2;
+$card-width: 350px;
+$section-main-background: #21232e;
+@mixin links2{
+	color: $mixin-color;
+	font-family: $family1;
+	font-size: map-get($font-sizes, "14");
+	text-align: center;
+	opacity: $opacity;
+	display: block;
+}
+%gradient{
+	background: -webkit-linear-gradient(45deg, rgb(103, 151, 7), rgb(45, 91, 214));
+	background: -moz-linear-gradient(45deg, rgb(103, 151, 7), rgb(45, 91, 214));
+	background: linear-gradient(45deg, rgb(103, 151, 7), rgb(45, 91, 214));
+}
